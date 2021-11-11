@@ -1,0 +1,15 @@
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.AccesoDatos\bin\Debug\netcoreapp3.1\NPT_Teatro.AccesoDatos.deps.json
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.AccesoDatos\bin\Debug\netcoreapp3.1\NPT_Teatro.AccesoDatos.dll
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.AccesoDatos\bin\Debug\netcoreapp3.1\NPT_Teatro.AccesoDatos.pdb
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.AccesoDatos\bin\Debug\netcoreapp3.1\NPT_Teatro.Models.dll
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.AccesoDatos\bin\Debug\netcoreapp3.1\NPT_Teatro.Utilidades.dll
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.AccesoDatos\bin\Debug\netcoreapp3.1\NPT_Teatro.Models.pdb
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.AccesoDatos\bin\Debug\netcoreapp3.1\NPT_Teatro.Utilidades.pdb
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.AccesoDatos\obj\Debug\netcoreapp3.1\NPT_Teatro.AccesoDatos.csproj.AssemblyReference.cache
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.AccesoDatos\obj\Debug\netcoreapp3.1\NPT_Teatro.AccesoDatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.AccesoDatos\obj\Debug\netcoreapp3.1\NPT_Teatro.AccesoDatos.AssemblyInfoInputs.cache
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.AccesoDatos\obj\Debug\netcoreapp3.1\NPT_Teatro.AccesoDatos.AssemblyInfo.cs
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.AccesoDatos\obj\Debug\netcoreapp3.1\NPT_Teatro.AccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.AccesoDatos\obj\Debug\netcoreapp3.1\NPT_Teatro.AccesoDatos.csproj.CopyComplete
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.AccesoDatos\obj\Debug\netcoreapp3.1\NPT_Teatro.AccesoDatos.dll
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.AccesoDatos\obj\Debug\netcoreapp3.1\NPT_Teatro.AccesoDatos.pdb

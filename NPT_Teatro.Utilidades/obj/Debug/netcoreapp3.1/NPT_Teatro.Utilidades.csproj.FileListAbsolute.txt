@@ -1,0 +1,10 @@
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.Utilidades\bin\Debug\netcoreapp3.1\NPT_Teatro.Utilidades.deps.json
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.Utilidades\bin\Debug\netcoreapp3.1\NPT_Teatro.Utilidades.dll
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.Utilidades\bin\Debug\netcoreapp3.1\NPT_Teatro.Utilidades.pdb
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.Utilidades\obj\Debug\netcoreapp3.1\NPT_Teatro.Utilidades.csproj.AssemblyReference.cache
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.Utilidades\obj\Debug\netcoreapp3.1\NPT_Teatro.Utilidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.Utilidades\obj\Debug\netcoreapp3.1\NPT_Teatro.Utilidades.AssemblyInfoInputs.cache
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.Utilidades\obj\Debug\netcoreapp3.1\NPT_Teatro.Utilidades.AssemblyInfo.cs
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.Utilidades\obj\Debug\netcoreapp3.1\NPT_Teatro.Utilidades.csproj.CoreCompileInputs.cache
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.Utilidades\obj\Debug\netcoreapp3.1\NPT_Teatro.Utilidades.dll
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro.Utilidades\obj\Debug\netcoreapp3.1\NPT_Teatro.Utilidades.pdb

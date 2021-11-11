@@ -4,14 +4,93 @@
     "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro\\NPT_Teatro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro\\NPT_Teatro.csproj": {
+    "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro.AccesoDatos\\NPT_Teatro.AccesoDatos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro\\NPT_Teatro.csproj",
-        "projectName": "NPT_Teatro",
-        "projectPath": "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro\\NPT_Teatro.csproj",
+        "projectUniqueName": "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro.AccesoDatos\\NPT_Teatro.AccesoDatos.csproj",
+        "projectName": "NPT_Teatro.AccesoDatos",
+        "projectPath": "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro.AccesoDatos\\NPT_Teatro.AccesoDatos.csproj",
         "packagesPath": "C:\\Users\\agust\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro\\obj\\",
+        "outputPath": "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro.AccesoDatos\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\agust\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro.Models\\NPT_Teatro.Models.csproj": {
+                "projectPath": "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro.Models\\NPT_Teatro.Models.csproj"
+              },
+              "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro.Utilidades\\NPT_Teatro.Utilidades.csproj": {
+                "projectPath": "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro.Utilidades\\NPT_Teatro.Utilidades.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.17, )"
+            },
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.17, )"
+            },
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[3.1.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro.Models\\NPT_Teatro.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro.Models\\NPT_Teatro.Models.csproj",
+        "projectName": "NPT_Teatro.Models",
+        "projectPath": "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro.Models\\NPT_Teatro.Models.csproj",
+        "packagesPath": "C:\\Users\\agust\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\agust\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +119,128 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro.Utilidades\\NPT_Teatro.Utilidades.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro.Utilidades\\NPT_Teatro.Utilidades.csproj",
+        "projectName": "NPT_Teatro.Utilidades",
+        "projectPath": "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro.Utilidades\\NPT_Teatro.Utilidades.csproj",
+        "packagesPath": "C:\\Users\\agust\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro.Utilidades\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\agust\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro\\NPT_Teatro.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro\\NPT_Teatro.csproj",
+        "projectName": "NPT_Teatro",
+        "projectPath": "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro\\NPT_Teatro.csproj",
+        "packagesPath": "C:\\Users\\agust\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\agust\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro.AccesoDatos\\NPT_Teatro.AccesoDatos.csproj": {
+                "projectPath": "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro.AccesoDatos\\NPT_Teatro.AccesoDatos.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.17, )"
@@ -52,6 +253,14 @@
               "target": "Package",
               "version": "[3.1.17, )"
             },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.17, )"
@@ -59,6 +268,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[3.1.17, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
             }
           },
           "imports": [

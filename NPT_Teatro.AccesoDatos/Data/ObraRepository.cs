@@ -15,7 +15,9 @@ namespace NPT_Teatro.AccesoDatos.Data
         {
             _db = db;
         }
-        public IEnumerable<SelectListItem> GetListObras()
+
+
+        public IEnumerable<SelectListItem> GetListaObras()
         {
             return _db.Obra.Select(i => new SelectListItem()
             {

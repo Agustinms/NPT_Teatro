@@ -3417,6 +3417,7 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.17",
           "Microsoft.AspNetCore.Mvc": "2.2.0",
           "Microsoft.EntityFrameworkCore": "3.1.17",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.17",
           "Microsoft.Extensions.Identity.Stores": "3.1.17",
           "NPT_Teatro.Models": "1.0.0",
           "NPT_Teatro.Utilidades": "1.0.0"

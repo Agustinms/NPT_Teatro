@@ -17,5 +17,7 @@ namespace NPT_Teatro.AccesoDatos.Data
         }
 
         public DbSet<Obra> Obra { get; set; }
+
+        public DbSet<Funcion> Funcion { get; set; }
     }
 }

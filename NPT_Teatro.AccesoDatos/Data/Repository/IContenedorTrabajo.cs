@@ -7,6 +7,7 @@ namespace NPT_Teatro.AccesoDatos.Data.Repository
     public interface IContenedorTrabajo : IDisposable
     {
         IObraRepository Obra { get; }
+        IFuncionRepository Funcion { get; }
 
         void Save();
     }

@@ -17,11 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Admin\Controllers\" />
+    <ProjectReference Include="..\NPT_Teatro.AccesoDatos\NPT_Teatro.AccesoDatos.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NPT_Teatro.AccesoDatos\NPT_Teatro.AccesoDatos.csproj" />
+    <Folder Include="wwwroot\imagenes\funciones\" />
   </ItemGroup>
 
 </Project>

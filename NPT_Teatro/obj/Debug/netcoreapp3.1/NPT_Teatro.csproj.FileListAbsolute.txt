@@ -433,7 +433,6 @@ C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\bin\Debug\netcoreapp3.1\zh-Han
 C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
 C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Cliente\Views\Home\Index.cshtml.g.cs
-C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Cliente\Views\Home\Privacy.cshtml.g.cs
 C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Cliente\Views\_ViewImports.cshtml.g.cs
 C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Cliente\Views\_ViewStart.cshtml.g.cs
 C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\bin\Debug\netcoreapp3.1\NPT_Teatro.AccesoDatos.dll
@@ -442,3 +441,11 @@ C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\bin\Debug\netcoreapp3.1\NPT_Te
 C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\bin\Debug\netcoreapp3.1\NPT_Teatro.AccesoDatos.pdb
 C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\bin\Debug\netcoreapp3.1\NPT_Teatro.Models.pdb
 C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\bin\Debug\netcoreapp3.1\NPT_Teatro.Utilidades.pdb
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Obras\Index.cshtml.g.cs
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Obras\Create.cshtml.g.cs
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_VistaCrearVolver.cshtml.g.cs
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Obras\Edit.cshtml.g.cs
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Funciones\Index.cshtml.g.cs
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Funciones\Create.cshtml.g.cs
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Funciones\Edit.cshtml.g.cs
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Cliente\Views\Home\Details.cshtml.g.cs

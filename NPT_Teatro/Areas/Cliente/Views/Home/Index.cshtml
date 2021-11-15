@@ -1,8 +1,35 @@
-﻿@{
+﻿@model NPT_Teatro.Models.ViewModels.HomeVM
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <div class="row fondoTitulo mt-5">
+        <div class="col-sm-12 py-5">
+            <h1 class="text-center text-white">Próximas funciones</h1>
+        </div>
+    </div>
+
+
+@if (Model.ListaFunciones.Count() > 0)
+{
+    <hr />
+    <div class="row">
+        @foreach (var funcion in Model.ListaFunciones.OrderBy(o => o.Id))
+        {
+             <div class="col-4">
+                 <div class="card">
+                     <img src="@funcion.UrlImagen" class="img-thumbnail" />
+                     <div class="card-body">
+                         <!--<h5 class="tex-center"></h5>-->
+                         <p>@funcion.Fecha</p>
+                         <a asp-action="Details" class="btn btn-success" style="border-radius:2px" asp-route-id="@funcion.Id">Más información</a>
+                     </div>
+                 </div>
+             </div>
+        }
+    </div>
+}
+else
+{
+    <p>No hay funciones próximas</p>
+}

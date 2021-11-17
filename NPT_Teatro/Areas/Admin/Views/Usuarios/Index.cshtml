@@ -39,18 +39,21 @@
                     </td>
 
                     <td class="text-light">
-                       @* @if (item.LockoutEnd == null || item.LockoutEnd < DateTime.Now)
-                        {
-                            <a class="btn btn-success text-white" asp-action="Bloquear" style="width:50px;" asp-route-id="@item.Id">
-                                <i class="fas fa-lock-open"></i>
-                            </a>
-                        }
-                        else
-                        {
-                            <a class="btn btn-danger text-white" asp-action="Desbloquear" style="width:50px;" asp-route-id="@item.Id">
-                                <i class="fas fa-lock-lock"></i>
-                            </a>
-                        }*@
+
+                        <i class="fas fa-trash-alt"></i>
+
+                        @* @if (item.LockoutEnd == null || item.LockoutEnd < DateTime.Now)
+        {
+            <a class="btn btn-success text-white" asp-action="Bloquear" style="width:50px;" asp-route-id="@item.Id">
+                <i class="fas fa-lock-open"></i>
+            </a>
+        }
+        else
+        {
+            <a class="btn btn-danger text-white" asp-action="Desbloquear" style="width:50px;" asp-route-id="@item.Id">
+                <i class="fas fa-lock-lock"></i>
+            </a>
+        }*@
 
                     </td>
                 </tr>

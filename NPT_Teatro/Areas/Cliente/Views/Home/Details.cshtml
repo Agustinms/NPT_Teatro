@@ -5,48 +5,49 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <br />
-<div class="container">
+<div class="container" style="width: 80%;">
+          
     <div class="card">
-        <div class="card-header bg-light text-light ml-0 row container">
-            <div class="col-12 col-m-6">
-                <!-- <h4 class="text-primary"></h4> -->
-            </div>
-            <div class="col-12 col-m-6">
-                <h4 class="text-muted">@Model.Fecha</h4>
-            </div>
-        </div>
-        <div class="card-body" style="text-align:center">
-            <div class="col-12">
-                <img src="@Model.UrlImagen" class="img-thumbnail" mx-auto d-block style="width:35%;" />
-            </div>
-        </div>
-        <div class="card-footer">
-            <div class="row">
-                <div class="col-12 col-md-12 pb-1">
-                    <a asp-action="Index" class="btn btn-primary btn-sm" style="width:100%">Volver</a>
+            <div class="card-header bg-light text-light ml-0 row container">
+
+                <div class="col-12 col-m-6">
+                    <h4 class="text-muted">@Model.Fecha.ToString("MM/dd/yyyy HH:mm")</h4>
                 </div>
             </div>
-            @if (User.IsInRole(CNT.Admin) || User.IsInRole(CNT.Usuario))
-            {
-
+            <div class="card-body" style="text-align:center">
+                <div class="col-12">
+                    <img src="@Model.UrlImagen" class="img-thumbnail" mx-auto d-block style="width:35%;" />
+                </div>
+            </div>
+            <div class="card-footer">
                 <div class="row">
-                    <div class="col-12 col-md-12 pb-1">
-                        <a asp-action="Reservar" asp-controller="Home" class="btn btn-success btn-sm" style="width:100%">Reservar</a>
+                    <div class="col-12 col-md-2 offset-5 pb-1">
+                        <a asp-action="Index" class="btn btn-primary btn-sm" style="width:100%">Volver</a>
                     </div>
                 </div>
+                @if (User.IsInRole(CNT.Admin) || User.IsInRole(CNT.Usuario))
+                {
 
-            }
-            else
-            {
-                <div class="row">
-                    <div class="col-12 col-md-12 pb-1">
-                        <a  asp-page="/Account/Login" asp-area="Identity" class="btn btn-success btn-sm" style="width:100%">Iniciá sesión para reservar</a>
+                    <div class="row">
+                        <div class="col-12 col-md-2 offset-5 pb-1">
+                            <a asp-action="Reservar" asp-controller="Home" class="btn btn-success btn-sm" style="width:100%">Reservar</a>
+                        </div>
                     </div>
-                </div>
 
-            }
+                }
+                else
+                {
+                    <div class="row">
+                        <div class="col-12 col-md-2 offset-5 pb-1">
+                            <a  asp-page="/Account/Login" asp-area="Identity" class="btn btn-success btn-sm" style="width:100%">Iniciá sesión para reservar</a>
+                        </div>
+                    </div>
 
-            <h4>Lugares disponibles: @Model.Cupo</h4>
+                }
+
+                <h4 class="text-center">Lugares disponibles: @Model.Cupo</h4>
+
+
+            </div>
         </div>
-    </div>
 </div>

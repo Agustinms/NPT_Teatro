@@ -45,7 +45,7 @@
                     <img src="@funcion.UrlImagen" class="img-thumbnail p-0" />
                     <div class="card-body">
                         <!--<h5 class="tex-center"></h5>-->
-                        <p class="text-light">@funcion.Fecha</p>
+                        <p class="text-light">@funcion.Fecha.ToString("MM/dd/yyyy HH:mm")</p>
                         <a asp-action="Details" id="boton-info" class="btn btn-success" style="border-radius: 5px; background-color: #1e8535; " asp-route-id="@funcion.Id">Más información</a>
                     </div>
                 </div>

@@ -1,9 +1,11 @@
-﻿@{
+﻿@using NPT_Teatro.Utilidades
+@{
     ViewData["Title"] = "Obras";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
+@if (User.IsInRole(CNT.Admin))
+{
 <div class="container">
     <div class="row">
         <div class="col-6">
@@ -30,4 +32,6 @@
         <script src="~/js/obra.js"></script>
     }
 
+}
+<p class="text-center" style="font-size: 50px;">Acceso no autorizado</p>
 

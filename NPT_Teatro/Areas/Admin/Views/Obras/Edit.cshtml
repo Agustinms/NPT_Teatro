@@ -1,8 +1,11 @@
-﻿@model NPT_Teatro.Models.Obra
+﻿@using NPT_Teatro.Utilidades
+@model NPT_Teatro.Models.Obra
 @{
     ViewData["Title"] = "Editar obras";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@if(User.IsInRole(CNT.Admin))
+            {
 
 <br />
 <br />
@@ -40,6 +43,8 @@
 
     </div>
 </form>
+            }
+<p class="text-center" style="font-size: 50px;">Acceso no autorizado</p>
 
 
 

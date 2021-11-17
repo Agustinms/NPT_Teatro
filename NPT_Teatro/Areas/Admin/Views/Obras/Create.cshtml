@@ -1,10 +1,12 @@
-﻿@model NPT_Teatro.Models.Obra
+﻿@using NPT_Teatro.Utilidades
+@model NPT_Teatro.Models.Obra
 @{
     ViewData["Title"] = "Crear obras";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<br />
+@if (User.IsInRole(CNT.Admin))
+{
+    <br />
 <br />
 <h3 class="text-center text-light">Crear una nueva obra</h3>
 <form method="post" asp-action="Create">
@@ -31,5 +33,6 @@
 
     </div>
 </form>
-
-
+    }
+    
+<p class="text-center" style="font-size: 50px;">Acceso no autorizado</p>

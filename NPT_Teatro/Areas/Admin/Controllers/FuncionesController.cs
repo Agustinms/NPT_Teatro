@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using NPT_Teatro.AccesoDatos.Data.Repository;
 using NPT_Teatro.Models.ViewModels;
+using NPT_Teatro.Utilidades;
 using System;
 using System.Collections.Generic;
 using System.IO;

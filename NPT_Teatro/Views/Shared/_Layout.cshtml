@@ -16,9 +16,9 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-secondary border-bottom box-shadow mb-0">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow mb-0" style="background-color: black;">
             <div class="container">
-                <a><img class="navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index" src="~/imagenes/logo.gif" width="80" /></a>
+                <img class="navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index" src="~/imagenes/logo_teatro.png" width="70" />
                 <!-- <a class="navbar-brand" asp-area="Cliente" asp-controller="Home" asp-action="Index">Teatro</a> -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -28,19 +28,19 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
 
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
-                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+                        </li>
                         @if (User.IsInRole(CNT.Admin))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Admin" asp-controller="Usuarios" asp-action="Index">Usuarios</a>
+                                <a class="nav-link text-light" asp-area="Admin" asp-controller="Usuarios" asp-action="Index">Usuarios</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Admin" asp-controller="Obras" asp-action="Index">Obras</a>
+                                <a class="nav-link text-light" asp-area="Admin" asp-controller="Obras" asp-action="Index">Obras</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Admin" asp-controller="Funciones" asp-action="Index">Funciones</a>
+                                <a class="nav-link text-light" asp-area="Admin" asp-controller="Funciones" asp-action="Index">Funciones</a>
                             </li>
                         }
                     </ul>
@@ -55,8 +55,8 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - Teatro - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="container text-center">
+            &copy; 2021 - Teatro -
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

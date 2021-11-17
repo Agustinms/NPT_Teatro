@@ -11,8 +11,8 @@ using System.Threading.Tasks;
 
 namespace NPT_Teatro.Areas.Admin.Controllers
 {
-   // [Authorize]
-    //[Area("Admin")]
+    [Authorize]
+    [Area("Admin")]
     public class FuncionesController : Controller
     {
         private readonly IContenedorTrabajo _contenedorTrabajo;

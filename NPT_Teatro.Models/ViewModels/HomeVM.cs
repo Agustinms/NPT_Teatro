@@ -7,5 +7,6 @@ namespace NPT_Teatro.Models.ViewModels
    public class HomeVM
     {
         public IEnumerable<Funcion> ListaFunciones { get; set; }
+        
     }
 }

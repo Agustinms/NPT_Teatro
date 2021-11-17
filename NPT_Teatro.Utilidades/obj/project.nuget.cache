@@ -1,8 +1,27 @@
 {
   "version": 2,
-  "dgSpecHash": "dTQfTgrKcXEULlBaqV8WJI+tfAyNB+gTlUBJWQt6RshRzejG1bANUK1gRkKhV9R5zHFNZsEMQxgfsFJahU3Lxw==",
+  "dgSpecHash": "mNKJy/KmeK8xpFnVBoKvldEbB+2gI7cQ/bqYDfCv6KnoCyKTfPMVPTxxnHD+ER7kG0Y4qt0Ax2yM29uxUVyBdQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\agust\\source\\repos\\NPT_Teatro\\NPT_Teatro.Utilidades\\NPT_Teatro.Utilidades.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\agust\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.21\\microsoft.aspnetcore.cryptography.internal.3.1.21.nupkg.sha512",
+    "C:\\Users\\agust\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.21\\microsoft.aspnetcore.cryptography.keyderivation.3.1.21.nupkg.sha512",
+    "C:\\Users\\agust\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\3.1.21\\microsoft.aspnetcore.identity.ui.3.1.21.nupkg.sha512",
+    "C:\\Users\\agust\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.21\\microsoft.extensions.caching.abstractions.3.1.21.nupkg.sha512",
+    "C:\\Users\\agust\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.21\\microsoft.extensions.configuration.3.1.21.nupkg.sha512",
+    "C:\\Users\\agust\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.21\\microsoft.extensions.configuration.abstractions.3.1.21.nupkg.sha512",
+    "C:\\Users\\agust\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.21\\microsoft.extensions.configuration.binder.3.1.21.nupkg.sha512",
+    "C:\\Users\\agust\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.21\\microsoft.extensions.dependencyinjection.3.1.21.nupkg.sha512",
+    "C:\\Users\\agust\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.21\\microsoft.extensions.dependencyinjection.abstractions.3.1.21.nupkg.sha512",
+    "C:\\Users\\agust\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\3.1.21\\microsoft.extensions.fileproviders.abstractions.3.1.21.nupkg.sha512",
+    "C:\\Users\\agust\\.nuget\\packages\\microsoft.extensions.fileproviders.embedded\\3.1.21\\microsoft.extensions.fileproviders.embedded.3.1.21.nupkg.sha512",
+    "C:\\Users\\agust\\.nuget\\packages\\microsoft.extensions.identity.core\\3.1.21\\microsoft.extensions.identity.core.3.1.21.nupkg.sha512",
+    "C:\\Users\\agust\\.nuget\\packages\\microsoft.extensions.identity.stores\\3.1.21\\microsoft.extensions.identity.stores.3.1.21.nupkg.sha512",
+    "C:\\Users\\agust\\.nuget\\packages\\microsoft.extensions.logging\\3.1.21\\microsoft.extensions.logging.3.1.21.nupkg.sha512",
+    "C:\\Users\\agust\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.21\\microsoft.extensions.logging.abstractions.3.1.21.nupkg.sha512",
+    "C:\\Users\\agust\\.nuget\\packages\\microsoft.extensions.options\\3.1.21\\microsoft.extensions.options.3.1.21.nupkg.sha512",
+    "C:\\Users\\agust\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.21\\microsoft.extensions.primitives.3.1.21.nupkg.sha512",
+    "C:\\Users\\agust\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

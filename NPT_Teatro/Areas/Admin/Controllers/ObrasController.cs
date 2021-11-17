@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using NPT_Teatro.AccesoDatos.Data.Repository;
 using NPT_Teatro.Models;
 using System;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace NPT_Teatro.Areas.Admin.Controllers
 {
+    [Authorize]
     [Area("Admin")]
     public class ObrasController : Controller
     {

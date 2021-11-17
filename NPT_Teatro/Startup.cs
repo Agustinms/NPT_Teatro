@@ -3,12 +3,15 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NPT_Teatro.AccesoDatos.Data;
 using NPT_Teatro.AccesoDatos.Data.Repository;
+using NPT_Teatro.Models;
+using NPT_Teatro.Utilidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,8 +34,12 @@ namespace NPT_Teatro
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddIdentity<ApplicationUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddRoleManager<RoleManager<IdentityRole>>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+
+            services.AddSingleton<IEmailSender, EmailSender>();
 
             services.AddScoped<IContenedorTrabajo, ContenedorTrabajo>();
 

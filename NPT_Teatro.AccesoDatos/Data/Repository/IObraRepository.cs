@@ -6,10 +6,10 @@ using System.Text;
 
 namespace NPT_Teatro.AccesoDatos.Data.Repository
 {
-    public interface IFuncionRepository : IRepository<Funcion>
+    public interface IObraRepository : IRepository<Obra>
     {
-       
+        IEnumerable<SelectListItem> GetListaObras();
 
-        void Update(Funcion funcion);
+        void Update(Obra obra);
     }
 }

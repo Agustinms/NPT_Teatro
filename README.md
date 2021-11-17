@@ -1,3 +1,3 @@
 # NPT_Teatro
 
-Sistema simple de compra de entradas de teatro
+Sistema simple de reserva de entradas de teatro

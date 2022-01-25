@@ -13,45 +13,35 @@
     <div class="row px-2 mx-2 border">
         <div asp-validtaion-summary="ModelOnly" class="text-danger"></div>
         <div class="col-8 mt-4">
-            <div class="form-group row">
-                <div class="col-4">
-                    <label asp-for="Funcion.Fecha"></label>
-                </div>
-                <div class="col-8">
-                    <input type="datetime-local" asp-for="Funcion.Fecha" class="form-control" />
-                    <span asp-validation-for="Funcion.Fecha" class="text-danger"></span>
-                </div>
-            </div>
+           
 
             <div class="form-group row">
                 <div class="col-4">
                     <label asp-for="Funcion.ObraId">Obra</label>
                 </div>
-                <div class="col-8">
-                    @Html.DropDownListFor(m => m.Funcion.ObraId, Model.ListaObras,
-                   "-Seleccionar obra-", new { @class = "form-control" })
-                </div>
+                
             </div>
 
             <div class="form-group row">
                 <div class="col-4">
                     <label asp-for="Funcion.Cupo"></label>
+                    
                 </div>
                 <div class="col-8">
-                    <input asp-for="Funcion.Cupo" class="form-control" max="100" min="1" />
+                    <input asp-for="Funcion.Cupo" class="form-control" max="@Model.Funcion.Cupo" min="1" />
                     <span asp-validation-for="Funcion.Cupo" class="text-danger"></span>
                 </div>
             </div>
 
-            <div class="form-group row">
-                <div class="col-4">
-                    <label asp-for="Funcion.UrlImagen"></label>
-                </div>
-                <div class="col-8">
-                    <input type="file" name="archivos" id="subidaArchivo" class="form-control" max="100" min="1" />
+          <script>
 
-                </div>
-            </div>
+
+
+          </script>
+
+            <h4>@Model.Funcion.Cupo</h4>
+
+           
 
             <div class="form-group row">
                 <div class="col-8 offset-4">

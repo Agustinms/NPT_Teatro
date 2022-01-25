@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using NPT_Teatro.AccesoDatos.Data.Repository;
 using NPT_Teatro.Models;
@@ -15,10 +16,12 @@ namespace NPT_Teatro.Controllers
     public class HomeController : Controller
     {
         private readonly IContenedorTrabajo _contenedorTrabajo;
+        private readonly IWebHostEnvironment _hostingEnviroment;
 
-        public HomeController(IContenedorTrabajo contenedorTrabajo)
+        public HomeController(IContenedorTrabajo contenedorTrabajo, IWebHostEnvironment hostingEnviroment)
         {
             _contenedorTrabajo = contenedorTrabajo;
+            _hostingEnviroment = hostingEnviroment;
         }
 
         public IActionResult Index()
@@ -36,5 +39,45 @@ namespace NPT_Teatro.Controllers
             return View(funcionDesdeDb);
         }
 
+
+        [HttpGet]
+        public IActionResult Reservar(int? id)
+        {
+            FuncionVM funvm = new FuncionVM()
+            {
+                Funcion = new Models.Funcion(),
+                ListaObras = _contenedorTrabajo.Obra.GetListaObras()
+            };
+
+            if (id != null)
+            {
+                funvm.Funcion = _contenedorTrabajo.Funcion.Get(id.GetValueOrDefault());
+            }
+
+            return View(funvm);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Reservar(FuncionVM funVM)
+        {
+            /* if(ModelState.IsValid)
+             {*/
+            string rutaPrincipal = _hostingEnviroment.WebRootPath;
+            var archivos = HttpContext.Request.Form.Files;
+            //Obtener archivo por su ID
+            var funcionDesdeDb = _contenedorTrabajo.Funcion.Get(funVM.Funcion.Id);
+
+         
+
+            _contenedorTrabajo.Funcion.Update(funVM.Funcion);
+            _contenedorTrabajo.Save();
+
+            return RedirectToAction(nameof(Index));
+            //}
+
+            /*funVM.ListaObras = _contenedorTrabajo.Obra.GetListaObras();
+            return View(funVM);*/
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿@model NPT_Teatro.Models.ViewModels.FuncionVM
 @{
-    ViewData["Title"] = "Editar funciones";
+    ViewData["Title"] = "Reservar lugar";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -28,16 +28,12 @@
                     
                 </div>
                 <div class="col-8">
-                    <input asp-for="Funcion.Cupo" class="form-control" max="@Model.Funcion.Cupo" min="1" />
+                    <input id="cupoReserva" asp-for="Funcion.Cupo" class="form-control" max="@Model.Funcion.Cupo" min="1" />
                     <span asp-validation-for="Funcion.Cupo" class="text-danger"></span>
                 </div>
             </div>
 
-          <script>
-
-
-
-          </script>
+          
 
             <h4>@Model.Funcion.Cupo</h4>
 
@@ -47,7 +43,7 @@
                 <div class="col-8 offset-4">
                     <div class="row">
                         <div class="col">
-                            <button type="submit" class="btn btn-primary form-control" asp-route-id="@Model.Funcion.Id">Actualizar</button>
+                            <button  asp-action="Reservar" class="btn btn-primary form-control" asp-route-id="Funcion.Id" >Reservar</button>
                             &nbsp;
                         </div>
                         <div class="col">

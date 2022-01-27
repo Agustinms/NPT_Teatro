@@ -28,6 +28,7 @@ using System.Text;
 
         public int Cupo {get; set;}
 
-        
+
+
     }
 }

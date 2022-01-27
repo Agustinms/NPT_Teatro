@@ -41,7 +41,7 @@ namespace NPT_Teatro.Controllers
 
 
         [HttpGet]
-        public IActionResult Reservar(int? id)
+        public IActionResult Reservas(int? id)
         {
             FuncionVM funvm = new FuncionVM()
             {
@@ -59,7 +59,7 @@ namespace NPT_Teatro.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Reservar(FuncionVM funVM)
+        public IActionResult Reservas(FuncionVM funVM)
         {
             /* if(ModelState.IsValid)
              {*/
@@ -79,5 +79,24 @@ namespace NPT_Teatro.Controllers
             /*funVM.ListaObras = _contenedorTrabajo.Obra.GetListaObras();
             return View(funVM);*/
         }
+    public IActionResult Reservar(FuncionVM funVM)
+    {
+            var funcionDesdeDb = _contenedorTrabajo.Funcion.Get(funVM.Funcion.Id);
+            funcionDesdeDb.Cupo = funcionDesdeDb.Cupo - 1;
+
+            funVM.Funcion.UrlImagen = funcionDesdeDb.UrlImagen;
+            funVM.Funcion.ObraId = funcionDesdeDb.ObraId;
+            funVM.Funcion.Obra = funcionDesdeDb.Obra;
+            funVM.Funcion.Id = funcionDesdeDb.Id;
+            funVM.Funcion.Fecha = funcionDesdeDb.Fecha;
+
+            _contenedorTrabajo.Funcion.Update(funcionDesdeDb);
+            _contenedorTrabajo.Save();
+
+
+            return RedirectToAction(nameof(Index));
     }
+    }
+
+
 }

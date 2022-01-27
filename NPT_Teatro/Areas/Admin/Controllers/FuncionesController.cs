@@ -180,75 +180,9 @@ namespace NPT_Teatro.Areas.Admin.Controllers
         }
 
         //Hacer metodo reserva
-        
-        [HttpGet]
-        public IActionResult Reservar(int? id)
-        {
-            FuncionVM funvm = new FuncionVM()
-            {
-                Funcion = new Models.Funcion(),
-                ListaObras = _contenedorTrabajo.Obra.GetListaObras()
-            };
-
-            if (id != null)
-            {
-                funvm.Funcion = _contenedorTrabajo.Funcion.Get(id.GetValueOrDefault());
-            }
-
-            return View();
-        }
-
        
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Reservar(FuncionVM funVM)
-        {
-            /* if(ModelState.IsValid)
-             {*/
-            string rutaPrincipal = _hostingEnviroment.WebRootPath;
-            var archivos = HttpContext.Request.Form.Files;
-            //Obtener archivo por su ID
-            var funcionDesdeDb = _contenedorTrabajo.Funcion.Get(funVM.Funcion.Id);
 
-            if (archivos.Count() > 0)
-            {
-                //Editar imagen
-                string nombreArchivo = Guid.NewGuid().ToString();
-                var subidas = Path.Combine(rutaPrincipal, @"imagenes\funciones");
-                var extension = Path.GetExtension(archivos[0].FileName);
-                var nuevaExtension = Path.GetExtension(archivos[0].FileName);
-                ///Obteniendo ruta del archivo nuevo y le sacamos los '\\'
-                var rutaImagen = Path.Combine(rutaPrincipal, funcionDesdeDb.UrlImagen.TrimStart('\\'));
-
-                if (System.IO.File.Exists(rutaImagen))
-                {
-                    System.IO.File.Delete(rutaImagen);
-                }
-
-
-                //Subiendo el archivo otra vez
-                
-
-                _contenedorTrabajo.Funcion.Update(funVM.Funcion);
-                _contenedorTrabajo.Save();
-
-                return RedirectToAction(nameof(Index));
-            }
-            else
-            {
-                //En caso de que la imagen ya exista y no se reemplace. Se conserva la que ya esta e la base
-                funVM.Funcion.UrlImagen = funcionDesdeDb.UrlImagen;
-            }
-
-            _contenedorTrabajo.Funcion.Update(funVM.Funcion);
-            _contenedorTrabajo.Save();
-
-            return RedirectToAction(nameof(Index));
-            //}
-
-            /*funVM.ListaObras = _contenedorTrabajo.Obra.GetListaObras();
-            return View(funVM);*/
-        }
+               
 
 
 
@@ -263,6 +197,8 @@ namespace NPT_Teatro.Areas.Admin.Controllers
 
   
         #endregion
+
+
     }
 }
 

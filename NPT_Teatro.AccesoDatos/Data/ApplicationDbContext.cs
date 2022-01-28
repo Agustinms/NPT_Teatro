@@ -20,6 +20,7 @@ namespace NPT_Teatro.AccesoDatos.Data
 
         public DbSet<Funcion> Funcion { get; set; }
 
+        public DbSet<Reserva> Reserva { get; set; }
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
     }
 }

@@ -43,7 +43,11 @@ namespace NPT_Teatro.Controllers
         [HttpGet]
         public IActionResult Reservas(int? id)
         {
+
             FuncionVM funvm = new FuncionVM()
+
+
+
             {
                 Funcion = new Models.Funcion(),
                 ListaObras = _contenedorTrabajo.Obra.GetListaObras()
@@ -79,10 +83,14 @@ namespace NPT_Teatro.Controllers
             /*funVM.ListaObras = _contenedorTrabajo.Obra.GetListaObras();
             return View(funVM);*/
         }
-    public IActionResult Reservar(FuncionVM funVM)
-    {
+    public IActionResult Reservar(FuncionVM funVM, int cantReservas, UsuarioVM usuarioVM)
+         {
+
+            
             var funcionDesdeDb = _contenedorTrabajo.Funcion.Get(funVM.Funcion.Id);
-            funcionDesdeDb.Cupo = funcionDesdeDb.Cupo - 1;
+            var usuarioDesdeDb = _contenedorTrabajo.Usuario.Get(usuarioVM.Usuario.Id);
+
+            funcionDesdeDb.Cupo = funcionDesdeDb.Cupo - cantReservas;
 
             funVM.Funcion.UrlImagen = funcionDesdeDb.UrlImagen;
             funVM.Funcion.ObraId = funcionDesdeDb.ObraId;
@@ -90,13 +98,36 @@ namespace NPT_Teatro.Controllers
             funVM.Funcion.Id = funcionDesdeDb.Id;
             funVM.Funcion.Fecha = funcionDesdeDb.Fecha;
 
+            Reserva reserva = new Reserva(usuarioVM.Usuario.Email, cantReservas, funcionDesdeDb.Id);
+            CrearReserva(reserva);
+
             _contenedorTrabajo.Funcion.Update(funcionDesdeDb);
             _contenedorTrabajo.Save();
 
 
             return RedirectToAction(nameof(Index));
+        }
+
+        [HttpGet]
+        public IActionResult CreearReserva()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult CrearReserva(Reserva reserva)
+        {
+            if (ModelState.IsValid)
+            {
+                _contenedorTrabajo.Reserva.Add(reserva);
+                _contenedorTrabajo.Save();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(reserva);
+        }
     }
-    }
+
 
 
 }

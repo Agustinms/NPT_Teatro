@@ -28,7 +28,7 @@
                     
                 </div>
                 <div class="col-8">
-                    <input id="cupoReserva" asp-for="Funcion.Cupo" class="form-control" max="@Model.Funcion.Cupo" min="1" />
+                    <input name="cantReservas" placeholder="1" class="form-control" max="@Model.Funcion.Cupo" min="1" />
                     <span asp-validation-for="Funcion.Cupo" class="text-danger"></span>
                 </div>
             </div>

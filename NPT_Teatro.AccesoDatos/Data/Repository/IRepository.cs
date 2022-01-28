@@ -9,6 +9,7 @@ namespace NPT_Teatro.AccesoDatos.Data.Repository
     public interface IRepository<T> where T : class
     {
         T Get(int id);
+        T Get(string id);
 
         IEnumerable<T> GetAll(
                 Expression<Func<T, bool>> filter = null,

@@ -15,10 +15,12 @@ namespace NPT_Teatro.AccesoDatos.Data
             Obra = new ObraRepository(_db);
             Funcion = new FuncionRepository(_db);
             Usuario = new UsuarioRepository(_db);
+            Reserva = new ReservaRepository(_db);
         }
         public IObraRepository Obra { get; private set; }
         public IFuncionRepository Funcion { get; private set; }
         public IUsuarioRepository Usuario { get; private set; }
+        public IReservaRepository Reserva { get; private set; }
 
         public void Dispose()
         {

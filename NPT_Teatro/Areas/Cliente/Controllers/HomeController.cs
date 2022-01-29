@@ -35,7 +35,7 @@ namespace NPT_Teatro.Controllers
 
         public IActionResult Details(int id)
         {
-            var funcionDesdeDb = _contenedorTrabajo.Funcion.GetFirstOrDefault(a => a.Id ==id);
+            var funcionDesdeDb = _contenedorTrabajo.Funcion.GetFirstOrDefault(a => a.Id == id);
             return View(funcionDesdeDb);
         }
 
@@ -43,7 +43,11 @@ namespace NPT_Teatro.Controllers
         [HttpGet]
         public IActionResult Reservas(int? id)
         {
+
             FuncionVM funvm = new FuncionVM()
+
+
+
             {
                 Funcion = new Models.Funcion(),
                 ListaObras = _contenedorTrabajo.Obra.GetListaObras()
@@ -68,7 +72,7 @@ namespace NPT_Teatro.Controllers
             //Obtener archivo por su ID
             var funcionDesdeDb = _contenedorTrabajo.Funcion.Get(funVM.Funcion.Id);
 
-         
+            
 
             _contenedorTrabajo.Funcion.Update(funVM.Funcion);
             _contenedorTrabajo.Save();
@@ -79,10 +83,15 @@ namespace NPT_Teatro.Controllers
             /*funVM.ListaObras = _contenedorTrabajo.Obra.GetListaObras();
             return View(funVM);*/
         }
-    public IActionResult Reservar(FuncionVM funVM)
-    {
+        public IActionResult Reservar(FuncionVM funVM, int cantReservas)
+        {
+
+            
+
             var funcionDesdeDb = _contenedorTrabajo.Funcion.Get(funVM.Funcion.Id);
-            funcionDesdeDb.Cupo = funcionDesdeDb.Cupo - 1;
+
+
+            funcionDesdeDb.Cupo = funcionDesdeDb.Cupo - cantReservas;
 
             funVM.Funcion.UrlImagen = funcionDesdeDb.UrlImagen;
             funVM.Funcion.ObraId = funcionDesdeDb.ObraId;
@@ -90,13 +99,18 @@ namespace NPT_Teatro.Controllers
             funVM.Funcion.Id = funcionDesdeDb.Id;
             funVM.Funcion.Fecha = funcionDesdeDb.Fecha;
 
+
+
+
             _contenedorTrabajo.Funcion.Update(funcionDesdeDb);
             _contenedorTrabajo.Save();
 
 
             return RedirectToAction(nameof(Index));
-    }
-    }
+        }
 
+
+
+    }
 
 }

@@ -9,6 +9,7 @@ namespace NPT_Teatro.AccesoDatos.Data.Repository
         IObraRepository Obra { get; }
         IFuncionRepository Funcion { get; }
         IUsuarioRepository Usuario { get;}
+        IReservaRepository Reserva { get; }
         
         void Save();
     }

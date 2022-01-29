@@ -9,7 +9,7 @@ namespace NPT_Teatro.Models
     public class ApplicationUser : IdentityUser
     {
         [Required(ErrorMessage = "El nombre es obligatorio")]
-        public string Nombre { get; set; } 
+        public string Nombre { get; set; }
     
     }
 }

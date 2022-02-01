@@ -44,6 +44,10 @@ namespace NPT_Teatro.Controllers
         public IActionResult Reservas(int? id)
         {
 
+           
+
+           
+
             FuncionVM funvm = new FuncionVM()
 
 
@@ -63,7 +67,7 @@ namespace NPT_Teatro.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Reservas(FuncionVM funVM)
+        public IActionResult Reservas(FuncionVM funVM, ReservaVM resVM)
         {
             /* if(ModelState.IsValid)
              {*/
@@ -71,6 +75,7 @@ namespace NPT_Teatro.Controllers
             var archivos = HttpContext.Request.Form.Files;
             //Obtener archivo por su ID
             var funcionDesdeDb = _contenedorTrabajo.Funcion.Get(funVM.Funcion.Id);
+
 
             
 
@@ -86,7 +91,14 @@ namespace NPT_Teatro.Controllers
         public IActionResult Reservar(FuncionVM funVM, int cantReservas)
         {
 
-            
+            ReservaVM resVM = new ReservaVM()
+            {
+                Reserva = new Models.Reserva(),
+                ListaFunciones = _contenedorTrabajo.Funcion.GetListaFunciones()
+            };
+
+
+
 
             var funcionDesdeDb = _contenedorTrabajo.Funcion.Get(funVM.Funcion.Id);
 
@@ -100,7 +112,12 @@ namespace NPT_Teatro.Controllers
             funVM.Funcion.Fecha = funcionDesdeDb.Fecha;
 
 
+            resVM.Reserva.CantEntradas = cantReservas;
+            resVM.Reserva.Email = "as";
+            resVM.Reserva.FuncionId = funVM.Funcion.Id;
 
+            _contenedorTrabajo.Reserva.Add(resVM.Reserva);
+           
 
             _contenedorTrabajo.Funcion.Update(funcionDesdeDb);
             _contenedorTrabajo.Save();

@@ -42,14 +42,28 @@ namespace NPT_Teatro.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(ReservaVM resVM)
+        public IActionResult Create(ReservaVM resVM, int cantReservas)
         {
 
-            if(resVM.Reserva.Id == 0)
+
+            if (resVM.Reserva.Id == 0)
             {
-                var reservaDesdeDb = _contenedorTrabajo.Reserva.Get(resVM.Reserva.Id);
 
                 _contenedorTrabajo.Reserva.Add(resVM.Reserva);
+
+                var funcionDesdeDb = _contenedorTrabajo.Funcion.Get(resVM.Reserva.FuncionId);
+                funcionDesdeDb.Cupo = funcionDesdeDb.Cupo - cantReservas;
+                var reservaDesdeDb = _contenedorTrabajo.Reserva.Get(resVM.Reserva.Id);
+
+                resVM.Reserva.Funcion.UrlImagen = funcionDesdeDb.UrlImagen;
+                resVM.Reserva.Funcion.ObraId = funcionDesdeDb.ObraId;
+                resVM.Reserva.Funcion.Obra = funcionDesdeDb.Obra;
+                resVM.Reserva.Funcion.Id = funcionDesdeDb.Id;
+                resVM.Reserva.Funcion.Fecha = funcionDesdeDb.Fecha;
+                resVM.Reserva.CantEntradas = cantReservas;
+
+
+                _contenedorTrabajo.Funcion.Update(resVM.Reserva.Funcion);
                 _contenedorTrabajo.Save();
 
                 return RedirectToAction(nameof(Index));

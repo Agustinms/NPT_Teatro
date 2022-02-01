@@ -492,3 +492,4 @@ C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\
 C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Reservas\Index.cshtml.g.cs
 C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Reservas\Reservas.cshtml.g.cs
 C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Reservas\Edit.cshtml.g.cs
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Cliente\Views\Home\Reservas.cshtml.g.cs

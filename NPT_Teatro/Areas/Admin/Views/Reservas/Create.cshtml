@@ -26,7 +26,7 @@
                        "-Seleccionar id de función-", new { @class = "form-control" })
                     </div>
                     <div class="col-8">
-                        <input asp-for="Reserva.CantEntradas" class="form-control" max="9999" min="1" />
+                        <input name="cantReservas" asp-for="Reserva.CantEntradas" class="form-control" max="9999" min="1" />
                         <span asp-validation-for="Reserva.CantEntradas" class="text-danger"></span>
                     </div>
                     

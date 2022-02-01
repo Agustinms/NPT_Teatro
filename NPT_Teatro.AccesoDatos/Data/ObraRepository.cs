@@ -8,28 +8,30 @@ using System.Text;
 
 namespace NPT_Teatro.AccesoDatos.Data
 {
-    public class UsuarioRepository : Repository<ApplicationUser>, IUsuarioRepository
+    public class ObraRepository : Repository<Obra>, IObraRepository
     {
-
         private readonly ApplicationDbContext _db;
-
-        public UsuarioRepository(ApplicationDbContext db) : base(db)
+        public ObraRepository(ApplicationDbContext db) : base(db)
         {
             _db = db;
         }
-        public void BloqueaUsuario(string IdUsuario)
+
+
+        public IEnumerable<SelectListItem> GetListaObras()
         {
-            var usuarioDesdeDb = _db.ApplicationUser.FirstOrDefault(u => u.Id == IdUsuario);
-            usuarioDesdeDb.LockoutEnd = DateTime.Now.AddYears(100);
-            _db.SaveChanges();
+            return _db.Obra.Select(i => new SelectListItem()
+            {
+                Text = i.Nombre,
+                Value = i.Id.ToString()
+            }) ;
         }
 
-        public void DesbloquearUsuario(string IdUsuario)
+        public void Update(Obra obra)
         {
-            var usuarioDesdeDb = _db.ApplicationUser.FirstOrDefault(u => u.Id == IdUsuario);
-            usuarioDesdeDb.LockoutEnd = DateTime.Now;
+            var objDesdeDb = _db.Obra.FirstOrDefault(s => s.Id == obra.Id);
+            objDesdeDb.Nombre = obra.Nombre;
+
             _db.SaveChanges();
         }
     }
-
 }

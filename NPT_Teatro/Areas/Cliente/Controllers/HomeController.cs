@@ -6,8 +6,10 @@ using NPT_Teatro.Models;
 using NPT_Teatro.Models.ViewModels;
 using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace NPT_Teatro.Controllers
@@ -44,13 +46,7 @@ namespace NPT_Teatro.Controllers
         public IActionResult Reservas(int? id)
         {
 
-           
-
-           
-
             FuncionVM funvm = new FuncionVM()
-
-
 
             {
                 Funcion = new Models.Funcion(),
@@ -61,6 +57,9 @@ namespace NPT_Teatro.Controllers
             {
                 funvm.Funcion = _contenedorTrabajo.Funcion.Get(id.GetValueOrDefault());
             }
+
+
+  
 
             return View(funvm);
         }
@@ -97,7 +96,12 @@ namespace NPT_Teatro.Controllers
                 ListaFunciones = _contenedorTrabajo.Funcion.GetListaFunciones()
             };
 
+            ClaimsPrincipal currentUser = this.User;
+            var currentUserID = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
 
+                     
+
+            var usuario = _contenedorTrabajo.Usuario.Get(currentUserID);
 
 
             var funcionDesdeDb = _contenedorTrabajo.Funcion.Get(funVM.Funcion.Id);
@@ -113,7 +117,7 @@ namespace NPT_Teatro.Controllers
 
 
             resVM.Reserva.CantEntradas = cantReservas;
-            resVM.Reserva.Email = "as";
+            resVM.Reserva.Email = usuario.Email ;
             resVM.Reserva.FuncionId = funVM.Funcion.Id;
 
             _contenedorTrabajo.Reserva.Add(resVM.Reserva);

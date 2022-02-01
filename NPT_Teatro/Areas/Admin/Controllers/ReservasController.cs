@@ -74,9 +74,11 @@ namespace NPT_Teatro.Areas.Admin.Controllers
         }
 
         [HttpDelete]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(int id, ReservaVM resVM)
         {
+
             var reservaDesdeDb = _contenedorTrabajo.Reserva.Get(id);
+            var funcionDesdeDb = _contenedorTrabajo.Funcion.Get(reservaDesdeDb.FuncionId);
             //Obtener la ruta de la imagen en el proyecto
            
 
@@ -86,6 +88,9 @@ namespace NPT_Teatro.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Error borrando reserva" });
             }
 
+            funcionDesdeDb.Cupo = funcionDesdeDb.Cupo + reservaDesdeDb.CantEntradas;
+
+            _contenedorTrabajo.Funcion.Update(reservaDesdeDb.Funcion);
             _contenedorTrabajo.Reserva.Remove(reservaDesdeDb);
             _contenedorTrabajo.Save();
             return Json(new { success = true, message = "Reserva borrada con éxito" });
@@ -112,15 +117,23 @@ namespace NPT_Teatro.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(ReservaVM resVM)
+        public IActionResult Edit(ReservaVM resVM, int cantEntradas)
         {
           
            
             var reservaDesdeDb = _contenedorTrabajo.Reserva.Get(resVM.Reserva.Id);
+            var funcionDesdeDb = _contenedorTrabajo.Funcion.Get(reservaDesdeDb.FuncionId);
 
-                        
 
-            _contenedorTrabajo.Reserva.Update(resVM.Reserva);
+
+            funcionDesdeDb.Cupo = funcionDesdeDb.Cupo + reservaDesdeDb.CantEntradas;
+            reservaDesdeDb.CantEntradas = cantEntradas;
+            funcionDesdeDb.Cupo = funcionDesdeDb.Cupo - cantEntradas;
+
+
+
+            _contenedorTrabajo.Reserva.Update(reservaDesdeDb);
+            _contenedorTrabajo.Funcion.Update(funcionDesdeDb);
             _contenedorTrabajo.Save();
 
             return RedirectToAction(nameof(Index));

@@ -6,7 +6,7 @@
 
 <br />
 <br />
-<h3 class="text-center">Editar función</h3>
+<h3 class="text-center text-light">Realizar reserva</h3>
 <form method="post" asp-action="Edit" enctype="multipart/form-data">
     <!--El enctype nos deja subir imagenes-->
     <input type="hidden" asp-for="Funcion.Id" />
@@ -15,16 +15,10 @@
         <div class="col-8 mt-4">
            
 
-            <div class="form-group row">
-                <div class="col-4">
-                    <label asp-for="Funcion.ObraId">Obra</label>
-                </div>
-                
-            </div>
 
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="Funcion.Cupo"></label>
+                    <label class="text-light" asp-for="Funcion.Cupo">Entradas a reservar:</label>
                     
                 </div>
                 <div class="col-8">
@@ -34,8 +28,11 @@
             </div>
 
           
+            <div class="form-group row">
+                <label class="text-light ml-3">Lugares disponibles:</label>
 
-            <h4>@Model.Funcion.Cupo</h4>
+            </div>
+                <h4 class="text-light">@Model.Funcion.Cupo</h4>
 
            
 

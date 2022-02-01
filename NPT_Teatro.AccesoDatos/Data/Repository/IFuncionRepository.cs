@@ -8,8 +8,8 @@ namespace NPT_Teatro.AccesoDatos.Data.Repository
 {
     public interface IFuncionRepository : IRepository<Funcion>
     {
-       
 
+        IEnumerable<SelectListItem> GetListaFunciones();
         void Update(Funcion funcion);
     }
 }

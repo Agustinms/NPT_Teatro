@@ -488,4 +488,7 @@ C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\
 C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Usuarios\Index.cshtml.g.cs
-C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Cliente\Views\Home\Reservas.cshtml.g.cs
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Reservas\Create.cshtml.g.cs
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Reservas\Index.cshtml.g.cs
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Reservas\Reservas.cshtml.g.cs
+C:\Users\agust\source\repos\NPT_Teatro\NPT_Teatro\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Reservas\Edit.cshtml.g.cs

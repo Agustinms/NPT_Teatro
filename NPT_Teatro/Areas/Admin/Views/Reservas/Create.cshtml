@@ -1,0 +1,45 @@
+﻿@using NPT_Teatro.Utilidades
+@model NPT_Teatro.Models.ViewModels.ReservaVM
+@{
+    ViewData["Title"] = "Crear reserva";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (User.IsInRole(CNT.Admin))
+{
+    <br />
+    <br />
+    <h3 class="text-center text-light">Crear una nueva obra</h3>
+    <form method="post" asp-action="Create">
+        <div class="row px-2 mx-2 border">
+            <div asp-validtaion-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-10 offset-1 mt-4">
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label class="text-light" asp-for="Reserva.Email"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Reserva.Email" class="form-control" />
+                        <span asp-validation-for="Reserva.Email" class="text-danger"></span>
+                    </div>
+                    <div class="col-8">
+                        @Html.DropDownListFor(m => m.Reserva.FuncionId, Model.ListaFunciones,
+                       "-Seleccionar id de función-", new { @class = "form-control" })
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Reserva.CantEntradas" class="form-control" max="9999" min="1" />
+                        <span asp-validation-for="Reserva.CantEntradas" class="text-danger"></span>
+                    </div>
+                    
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-8 offset-4">
+                        <partial name="_VistaCrearVolver" />
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </form>
+}

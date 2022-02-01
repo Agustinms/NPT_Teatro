@@ -15,7 +15,16 @@ namespace NPT_Teatro.AccesoDatos.Data
         {
             _db = db;
         }
-      
+
+        public IEnumerable<SelectListItem> GetListaFunciones()
+        {
+            return _db.Funcion.Select(i => new SelectListItem()
+            {
+                Text = i.Id.ToString(),
+                Value = i.Id.ToString()
+            }) ;
+        }
+
 
         public void Update(Funcion funcion)
         {

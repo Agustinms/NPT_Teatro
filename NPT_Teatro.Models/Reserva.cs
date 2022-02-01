@@ -19,15 +19,7 @@ namespace NPT_Teatro.Models
         [ForeignKey("FuncionId")]
         public Funcion Funcion { get; set; }
 
-
-        public Reserva(string Email, int CantEntradas, int FuncionId)
-        {
-            
-            Email = this.Email;
-            CantEntradas = this.CantEntradas;
-            FuncionId = this.FuncionId;
-            
-        }
+   
 
     }
 }
